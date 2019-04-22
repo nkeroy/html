@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang = "ja">
+<header>
+	<title> Songs </title>
+	<nav>
+		<a href="https://yinismss.wordpress.com/2014/05/18/kanade-isshukan-friends-ed-lyric-translation/" target = "_blank">About</a>|
+		<a href="https://myanimelist.net/anime/21327/Isshuukan_Friends" target = "_blank">Anime</a> |
+		<a href="https://www.google.com/maps/place/Mount+Fuji/@35.6292528,138.6672718,9z/data=!4m5!3m4!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3605555!4d138.7277777!5m1!1e4" target = "_blank">Location</a>
+	</nav>
+</header>
+<body>
+
+
+
+<h1>Welcome to my home page!</h1>
+<p>Some text.</p>
+<p>Some more text.</p>
+<p id="display"></p>
+
+<button id="buttonLike" onClick="like()">Like!</button><br>
+<button id="buttonDislike" onClick="dislike()">Dislike..</button><br>
+<button id="buttonLyrics" onclick="seeLyrics()">See Lyrics</button>
+<br>
+<br>
+
+<script>
+	var alertStatement = "You have already liked/disliked the video";
+	function seeLyrics(){
+		var x = document.getElementById("lyrics");
+		var y = document.getElementById("buttonLyrics");
+		if(x.style.display === "none") {
+			x.style.display = "block";
+			y.innerHTML = "Hide Lyrics";
+		} else {
+			x.style.display = "none";
+			y.innerHTML = "See Lyrics";
+		}
+	}
+
+	function like() {
+		
+		if (document.getElementById("buttonLike").disabled == false && document.getElementById("buttonDislike").disabled == false){
+			var display = "You have liked this video"
+			document.getElementById("display").innerHTML = display;
+			document.getElementById("buttonLike").disabled = true;
+			
+		} else {
+			document.getElementById("buttonDislike").disabled = false;
+			document.getElementById("display").innerHTML = "";
+		}
+	}
+
+	function dislike() {
+		if (document.getElementById("buttonLike").disabled == false && document.getElementById("buttonDislike").disabled == false){
+			var display = "You have disliked this video"
+			document.getElementById("display").innerHTML = display;
+			document.getElementById("buttonDislike").disabled = true;
+		} else {
+			document.getElementById("buttonLike").disabled = false;
+			document.getElementById("display").innerHTML = "";
+		}
+	}
+</script>	
+	
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mzu8uOoPY4M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p hidden id="lyrics"> 
+<br> 改札の前 つなぐ手と手
+<br> いつものざわめき 新しい風
+<br> 明るく見送るはずだったのに
+<br> うまく笑えずに君を見ていた
+<br> 君が大人になってくその季節が
+<br> 悲しい歌で溢れないように
+<br> 最後に何か君に伝えたくて
+<br> 「さよなら」に代わる言葉を 僕は探してた
+<br> 君の手を引くその役目が
+<br> 僕の使命だなんて そう思ってた
+<br> だけど今わかったんだ 僕らならもう
+<br> 重ねた日々が ほら 導いてくれる
+<br>君が大人になってくその時間が
+<br> 降り積もる間に僕も変わってく
+<br> たとえばそこにこんな歌があれば
+<br> ふたりはいつもどんな時も つながっていける
+<br> 突然ふいに鳴り響くベルの音
+<br> 焦る僕 解ける手 離れてく君
+<br> 夢中で呼び止めて 抱きしめたんだ
+<br> 君がどこに行ったって 僕の声で守るよ
+<br> 君が僕の前に現れた日から
+<br> 何もかもが違くみえたんだ
+<br> 朝も光も涙も歌う声も
+<br> 君が輝きをくれたんだ
+<br> 抑えきれない思いをこの声に乗せて
+<br> 遠く君の街へ届けよう
+<br> たとえばそれがこんな歌だったら
+<br> 僕らは何処にいたとしてもつながっていける </p>
+<br>
+</body>
+</html>
